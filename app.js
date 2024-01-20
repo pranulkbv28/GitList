@@ -13,7 +13,7 @@ let profileLinks = document.getElementById("profileLinks");
 let image = document.getElementById("image");
 
 
-let token = "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";
+let token = "";
 let username = searchRepo.value;
 let headers = new Headers();
 headers.append("Authorization", `token ${token}`);
@@ -43,7 +43,7 @@ let searchingRepositories = (numberOfRepositories) => {
     repositoriesContainer.innerHTML = '';
     pagesContainer.innerHTML = '';
 
-    let token = "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";
+    let token = "";
     let username = searchRepo.value;
     let headers = new Headers();
     headers.append("Authorization", `token ${token}`);
@@ -128,7 +128,7 @@ let pagination = (i) => {
 
 
     repositoriesContainer.innerHTML = '';
-    let token = "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";
+    let token = "";
     let headers = new Headers();
     headers.append("Authorization", `token ${token}`);
     let username = searchRepo.value;
