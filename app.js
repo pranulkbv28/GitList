@@ -113,7 +113,7 @@ let profileLinks = document.getElementById("profileLinks");
 let image = document.getElementById("image");
 
 
-let token = "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";
+let token = "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";
 let username = searchRepo.value;
 let headers = new Headers();
 headers.append("Authorization", `token ${token}`);
@@ -147,7 +147,7 @@ let searchingRepositories = (numberOfRepositories) => {
     repositoriesContainer.innerHTML = '';
     pagesContainer.innerHTML = '';
 
-    let token = "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";
+    let token = "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";
     let username = searchRepo.value;
     let headers = new Headers();
     headers.append("Authorization", `token ${token}`);
@@ -236,9 +236,11 @@ let pagination = (i) => {
 
 
     repositoriesContainer.innerHTML = '';
-    // let token = "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";
-    // let headers = new Headers();
-    // headers.append("Authorization", `token ${token}`);
+    let token = "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";
+    let headers = new Headers();
+    headers.append("Authorization", `token ${token}`);
+    let username = searchRepo.value;
+    console.log(username);
 
 
   fetch(`https://api.github.com/users/${username}`, { headers: headers })
@@ -263,12 +265,22 @@ let pagination = (i) => {
             let languageContainer = document.createElement("div");
             repositoryContainer.appendChild(languageContainer);
             languageContainer.id = "languageContainer";
-            Object.keys(languagesData).forEach((languageUsed) => {
-              let languageField = document.createElement("div");
-              languageContainer.appendChild(languageField);
-              languageField.id = "language";
-              languageField.innerText = languageUsed;
-            });
+            if(Object.keys(languagesData).length<5){
+                Object.keys(languagesData).forEach((languageUsed) => {
+                    let languageField = document.createElement("div");
+                    languageContainer.appendChild(languageField);
+                    languageField.id = "language";
+                    languageField.innerText = languageUsed;
+                });
+            }
+            else{
+                Object.keys(languagesData).slice(0, 3).forEach((languageUsed) => {
+                    let languageField = document.createElement("div");
+                    languageContainer.appendChild(languageField);
+                    languageField.id = "language";
+                    languageField.innerText = languageUsed;
+                });
+            }
           });
       });
     })

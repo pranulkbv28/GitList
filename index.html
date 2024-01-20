@@ -4,21 +4,21 @@
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Repo List</title>
+    <title>GitHub Repo List-1</title>
 </head>
 <body>
     <main>
-        <section id="mainContainer" class="main-container before"> <!-- before -->
+        <section id="mainContainer" class="main-container before">
             <h1 id="websiteName">GitList</h1>
             <div class="search-bar">
-                <input type="text" name="searchRepo" id="searchRepo">
-                <button><i onclick="searchingRepo()" id="searchButton" class="fa-solid fa-magnifying-glass before-button"></i></button> <!-- before-button -->
+                <input type="text" name="searchRepo" id="searchRepo" placeholder="Enter the Username">
+                <button><i onclick="searchingRepo()" id="searchButton" class="fa-solid fa-magnifying-glass before-button"></i></button>
             </div>
         </section>
         <section id="repoContainer" class="repo-conttainer d-none">
             <div id="infoContainer">
                 <div id="imgContainer">
-                    <img id="image" src="./assets/pfp2.jpg" alt="">
+                    <img id="image" src="" alt="">
                 </div>
                 <div id="deetContainer">
                     <h1 id="profileName"></h1>
@@ -32,9 +32,6 @@
                     </p>
                 </div>
             </div>
-            <!-- <p id="gitHubProfileLink">
-                <a href="">GitHub</a>
-            </p> -->
             <p>
                 <label for="pageNum">Number of Repos</label>
                 <select onchange="showNumberOfRepos()" name="pageNum" id="pageNum">
@@ -43,127 +40,12 @@
                 </select>
             </p>
             <section id="repositoriesContainer" class="repositories-container">
-                <!-- <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div>
-                <div class="repository-container">
-                    <h3 id="repoName">Hero</h3>
-                    <div id="languageContainer">
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                        <div id="language">HTML</div>
-                    </div>                    
-                </div> -->
-
-
+                
             </section>
         </section>
         <footer class="d-none" id="footer">
             <section id="pagesContainer">
-                <!-- <div id="page">1</div>
-                <div id="page">2</div>
-                <div id="page">3</div>
-                <div id="page">4</div>
-                <div id="page">5</div>
-                <div id="page">6</div>
-                <div id="page">7</div> -->
+               
             </section>
         </footer>
     </main>

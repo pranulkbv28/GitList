@@ -41,7 +41,6 @@ form{
     top: 2%;
     right: 33.5%;
     cursor: pointer;
-    /* aspect-ratio: 1/1; */
 }
 .before-button{
     margin-top: 265px;
@@ -104,11 +103,12 @@ form{
     gap: 10px;
 }
 #language{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 6px;
     padding: 4px 12px;
     width: 20%;
     text-align: center;
+    background-color: aqua;
 }
 /* repositories-container */
 /* repo-container */
