@@ -1,0 +1,131 @@
+body{
+    box-sizing: border-box;
+}
+.d-none{
+    display: none;
+}
+
+
+/* main-container */
+.main-container{
+    text-align: center;
+    font-size: x-large;
+    transition: 0.2s ease-in-out;
+}
+.before{
+    /* height: 100px; */
+    margin: 200px 0;
+}
+form{
+    position: relative;
+}
+#searchRepo{
+    width: 30%;
+    padding: 8px 40px 8px 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    /* border: none; */
+    /* background-color: black; */
+}
+#searchRepo:focus{
+    outline: none;
+}
+.search-bar button{
+    width: 30px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid black;
+    border:  none;
+    position: absolute;
+    top: 2%;
+    right: 33.5%;
+    cursor: pointer;
+    /* aspect-ratio: 1/1; */
+}
+.before-button{
+    margin-top: 265px;
+}
+.search-bar button i{
+    transition: 0.2s ease-in-out;
+}
+.search-bar button:hover i{
+    transform: scale(1.3);
+}
+/* main-container */
+
+/* repo-container */
+.repo-conttainer{
+    width: 90%;
+    margin: 50px auto 0;
+}
+#infoContainer{
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+
+    /* gap: -10px; */
+}
+#imgContainer{
+    width: 20%;
+    /* aspect-ratio: 1/1; */
+}
+#imgContainer img{
+    width: 70%;
+    border-radius: 50%;
+}
+#deetContainer{
+    width: 80%;
+}
+
+#gitHubProfileLink{
+    margin-top: 40px;
+}
+
+
+/* repositories-container */
+.repositories-container{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.repository-container{
+    width: 30%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+.repository-container h3{
+    margin-top: 0;
+}
+#languageContainer{
+    display: flex;
+    gap: 10px;
+}
+#language{
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 4px 12px;
+    width: 20%;
+    text-align: center;
+}
+/* repositories-container */
+/* repo-container */
+
+/* pagesContainer */
+#pagesContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+#page{
+    width: 30px;
+    aspect-ratio: 1/1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+/* pagesContainer */

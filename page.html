@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section id="mainContainer" class="main-container"> <!-- before -->
+            <h1 class="d-none" id="websiteName">GitList</h1>
+            <div class="search-bar">
+                <input type="text" name="searchRepo" id="searchRepo">
+                <button><i onclick="searchingRepo()" id="searchButton" class="fa-solid fa-magnifying-glass"></i></button> <!-- before-button -->
+            </div>
+        </section>
+        <section id="repoContainer" class="repo-conttainer d-none">
+            <div id="infoContainer">
+                <div id="imgContainer">
+                    <img id="image" src="./assets/pfp2.jpg" alt="">
+                </div>
+                <div id="deetContainer">
+                    <h1 id="profileName">Pranaav B V</h1>
+                </div>
+            </div>
+            <section id="repositoriesContainer" class="repositories-container">
+
+            </section>
+        </section>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/a7b1f1ff44.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
