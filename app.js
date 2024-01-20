@@ -1,103 +1,3 @@
-// // The GitHub username you're interested in
-// let username = 'pranulkbv28';
-
-// // The API endpoint URL for the user's repositories
-// let url1 = `https://api.github.com/users/${username}/repos`;
-
-// let x;
-
-// // Use the `fetch` function to get the data from the API
-// fetch(url1)
-//   .then(response => {
-//     // The API call was successful, get the response data as JSON
-//     return response.json();
-//   })
-//   .then(data => {
-//     // We have the data as JSON
-//     console.log('Here are the repositories:');
-//     console.log(data);
-//     x = data.length;
-// for(i=1;i<=x;i++){
-//     console.log(i);
-// }
-// if(x%10==0){
-//     console.log("The number of pages required is: "+x/10);
-// }else{
-//     console.log("The number of pages required is: "+parseInt(x/10)+1)
-// }
-//   })
-//   .catch(error => {
-//     // There was an error with the API call
-//     console.log('Oops, something went wrong:', error);
-//   });
-
-// let username = 'pranulkbv28'; // replace with the username you're interested in
-
-// // The API endpoint URL for the user's details
-// let url = `https://api.github.com/users/${username}`;
-
-// // Use the `fetch` function to get the data from the API
-// fetch(url)
-//   .then(response => {
-//     // The API call was successful, get the response data as JSON
-//     return response.json();
-//   })
-//   .then(data => {
-//     // We have the data as JSON
-//     console.log('User Details:');
-//     console.log('Name:', data.name);
-//     console.log('Bio:', data.bio);
-//     console.log('Profile Picture URL:', data.avatar_url);
-//   })
-//   .catch(error => {
-//     // There was an error with the API call
-//     console.log('Oops, something went wrong:', error);
-//   });
-
-//   // Create a new button element
-// let button = document.createElement('button');
-
-// // Set the inner HTML of the button
-// button.innerHTML = "This is an element created with JavaScript";
-
-// // Add an onClick function named "test"
-// button.onclick = function test() {
-//     // Your code here
-//     console.log("Button clicked!");
-// };
-
-// // Append the button to the body of the document
-// document.body.appendChild(button);
-
-// let username = 'pranulkbv28';  // Replace with the GitHub username you're interested in
-
-// // Fetch the user data
-// fetch(`https://api.github.com/users/${username}`)
-// .then(response => response.json())
-// .then(userData => {
-//     console.log('User Name:', userData.name);
-//     console.log('User Bio:', userData.bio);
-//     console.log('User Location:', userData.location);
-//     console.log('User GitHub Link:', userData.html_url);
-
-//     // Fetch the repository data
-//     return fetch(userData.repos_url);
-// })
-// .then(response => response.json())
-// .then(reposData => {
-//     reposData.forEach(repo => {
-//         console.log('Repository Name:', repo.name);
-
-//         // Fetch the languages used in the repository
-//         fetch(repo.languages_url)
-//         .then(response => response.json())
-//         .then(languagesData => {
-//             console.log('Languages Used:', Object.keys(languagesData));
-//         });
-//     });
-// })
-// .catch(error => console.error('Error:', error));
-
 let mainContainer = document.getElementById("mainContainer");
 let searchRepo = document.getElementById("searchRepo");
 let searchButton = document.getElementById("searchButton");
@@ -118,11 +18,7 @@ let username = searchRepo.value;
 let headers = new Headers();
 headers.append("Authorization", `token ${token}`);
  
-// mainContainer.classList.add("before");
-// searchButton.classList.add("before-button");
-// websiteName.classList.remove("d-none");
-// repoContainer.classList.add("d-none");
-// footer.classList.add("d-none");
+
 
 let numberOfRepositories = 10;
 
@@ -191,10 +87,6 @@ let searchingRepositories = (numberOfRepositories) => {
             pagination(i);
         });
         pageElement.appendChild(pageNumber)
-        // pageElement.addEventListener("click", function (i, username) {
-        //   pagination(i, username);
-        // });
-        // pageElement.innerHTML = i;
       }
       reposData.slice(0, Math.min(x, numberOfRepositories)).forEach((repo) => {
         // Fetch the languages used in the repository
@@ -286,5 +178,3 @@ let pagination = (i) => {
     })
     .catch((error) => console.error("Error:", error));
 };
-
-
